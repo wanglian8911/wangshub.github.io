@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wangshub.github.io/"/>
-  <updated>2018-03-17T09:10:40.000Z</updated>
+  <updated>2018-03-31T07:36:01.000Z</updated>
   <id>http://wangshub.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cerebro插件之电影磁力搜索神器</title>
+    <link href="http://wangshub.github.io/2018/03/31/Cerebro%E6%8F%92%E4%BB%B6%E4%B9%8B%E7%94%B5%E5%BD%B1%E7%A3%81%E5%8A%9B%E6%90%9C%E7%B4%A2%E7%A5%9E%E5%99%A8/"/>
+    <id>http://wangshub.github.io/2018/03/31/Cerebro插件之电影磁力搜索神器/</id>
+    <published>2018-03-31T07:34:51.000Z</published>
+    <updated>2018-03-31T07:36:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Cerebro-插件之电影磁力搜索神器"><a href="#Cerebro-插件之电影磁力搜索神器" class="headerlink" title="Cerebro 插件之电影磁力搜索神器"></a>Cerebro 插件之电影磁力搜索神器</h1><blockquote><p>Cerebro plugin to search torrent of movies<br>什么？看个片儿还要打开网页慢慢找?！</p></blockquote><p>这周在学 Node.js, 看了 <a href="https://github.com/carlos-wong" target="_blank" rel="noopener">@carlos-wong</a> 推荐的<a href="https://eloquentjavascript.net" target="_blank" rel="noopener">《Eloquent JavaScript》</a> 这本书的前几章，就抑制不住想写点什么练手。<a href="https://github.com/KELiON/cerebro" target="_blank" rel="noopener">Cerebro</a> 是一个跨平台的快速启动工具（同时支持 Windows、MacOs、Linux），并且可以用 Javascript 定制各种自己喜欢的插件。所以做了一个<strong>电影磁力搜索器</strong>的插件。</p><h2 id="支持平台"><a href="#支持平台" class="headerlink" title="支持平台"></a>支持平台</h2><p>Windows、Linux、MacOS</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://github.com/wangshub/cerebro-torrent/raw/master/resource/magnet_demo_2M.gif" alt="截图" title="">                </div>                <div class="image-caption">截图</div>            </figure><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>在 Cerebro 对话框中输入电影名称，使用键盘上/下按键选择电影，敲击 <code>回车</code> ,磁力链接就会自动复制到剪贴板。</p><ul><li><code>magnet [电影名称][空格]</code></li></ul><h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><h3 id="Cerebro-内安装插件"><a href="#Cerebro-内安装插件" class="headerlink" title="Cerebro 内安装插件"></a>Cerebro 内安装插件</h3><ul><li><code>ctrl-space</code> 启动 Cerebro</li><li>输入 <code>plugins torrent</code></li><li>点击 <code>install</code></li></ul><h3 id="源码安装"><a href="#源码安装" class="headerlink" title="源码安装"></a>源码安装</h3><ul><li><p>确保安装好了 <a href="https://github.com/KELiON/cerebro" target="_blank" rel="noopener">Cerebro</a></p></li><li><p><code>Clone</code> 代码到本地，并执行</p>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/wangshub/cerebro-torrent.git</span><br><span class="line">cd cerebro-torrent</span><br><span class="line">yarn install</span><br></pre></td></tr></table></figure></li><li><p>将 <code>cerebro-torrent</code> 文件夹拷贝或者软链接到 <code>Cerebro</code> 的 <code>node_module</code> 文件夹下；</p></li><li>启动 <code>Cerebro</code>，输入 <code>magnets 葫芦娃</code>，然后敲击 <code>空格</code>；</li><li>稍等片刻，上下选择，敲击回车就可以将磁力链接复制到剪贴板；</li><li>打开迅雷或者其他下载器，尽情享受吧！</li></ul><h2 id="原理说明"><a href="#原理说明" class="headerlink" title="原理说明"></a>原理说明</h2><ul><li>解析输入的指令；</li><li>利用 async 和 request 库并发爬取网站；</li><li>使用 cheerio 解析网页节点；</li><li>嵌入一段 html 对爬取结果进行显示；</li></ul><h2 id="代码地址"><a href="#代码地址" class="headerlink" title="代码地址"></a>代码地址</h2><p>欢迎 <code>star ⭐️</code>  和 <code>fork 💫</code> 多提 Issue !<br><a href="https://github.com/wangshub/cerebro-torrent" target="_blank" rel="noopener">wangshub/cerebro-torrent</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Cerebro-插件之电影磁力搜索神器&quot;&gt;&lt;a href=&quot;#Cerebro-插件之电影磁力搜索神器&quot; class=&quot;headerlink&quot; title=&quot;Cerebro 插件之电影磁力搜索神器&quot;&gt;&lt;/a&gt;Cerebro 插件之电影磁力搜索神器&lt;/h1&gt;&lt;bloc
+      
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://wangshub.github.io/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>如何解决EDAS上传论文时fonts问题</title>
