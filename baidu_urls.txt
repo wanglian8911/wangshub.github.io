@@ -1,1 +1,1 @@
-http://wangshub.github.io/2018/03/31/Cerebro插件之电影磁力搜索神器/
+http://wangshub.github.io/2018/04/23/Python插件式程序结构设计/
