@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wangshub.github.io/"/>
-  <updated>2018-04-23T08:23:16.000Z</updated>
+  <updated>2018-04-25T07:53:41.000Z</updated>
   <id>http://wangshub.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python插件式爬虫</title>
+    <link href="http://wangshub.github.io/2018/04/25/python%E6%8F%92%E4%BB%B6%E5%BC%8F%E7%88%AC%E8%99%AB/"/>
+    <id>http://wangshub.github.io/2018/04/25/python插件式爬虫/</id>
+    <published>2018-04-25T07:51:05.000Z</published>
+    <updated>2018-04-25T07:53:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Python-插件式的信息爬虫"><a href="#Python-插件式的信息爬虫" class="headerlink" title="Python 插件式的信息爬虫"></a>Python 插件式的信息爬虫</h1><blockquote><p>🐝 一群不辞劳苦采花小蜜蜂</p></blockquote><ul><li><a href="https://github.com/wangshub/beehive" target="_blank" rel="noopener">项目代码地址</a></li></ul><p>本项目运行在可以运行在本地或者服务器端，将不同插件程序获取的信息如：每日天气、新闻等，通过 Github Api 上传到仓库进行保存。当然，你还可以你日常机械重复性的劳动在插件中帮你完成，比如煮咖啡、发邮件等等，真是棒极了。</p><blockquote><p><strong>额外收获</strong> ：定期稳定运行在服务器上，还可以每日贡献一次 Github 贡献度 … 点亮你的人生！</p></blockquote><h2 id="工程说明"><a href="#工程说明" class="headerlink" title="工程说明"></a>工程说明</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">├── app</span><br><span class="line">│   └── plugins</span><br><span class="line">│       └── weather.py</span><br><span class="line">├── builtin_plugins</span><br><span class="line">├── config</span><br><span class="line">│   └── config.json</span><br><span class="line">├── main.py</span><br><span class="line">└── upload_github.py</span><br></pre></td></tr></table></figure><ul><li><code>main.py</code> : 加载 <code>builtin_plugins/</code> 和 <code>app/</code> 下的插件；</li><li><code>app/plugins/</code> : 插件程序存放路径；</li><li><code>builtin_plugins</code> ： 内置插件路径；</li><li><code>upload_github.py</code> : 通过 Github Api 提交一次 Commit；</li></ul><h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><ul><li><p>生成 Github Token </p></li><li><p>运行代码</p>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python main.py</span><br></pre></td></tr></table></figure></li></ul><h2 id="插件接口-Json-格式"><a href="#插件接口-Json-格式" class="headerlink" title="插件接口 Json 格式"></a>插件接口 Json 格式</h2><p>可以自己补充插件，各个插件的返回值为字典类型，必须满足如下格式</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"code"</span>: <span class="number">0</span>,</span><br><span class="line">  <span class="attr">"type"</span>: <span class="string">"weather"</span>,</span><br><span class="line">  <span class="attr">"date"</span>: <span class="string">"2018-04-23 20:18:03"</span>,</span><br><span class="line">  <span class="attr">"content"</span>: &#123;</span><br><span class="line">    <span class="attr">"city"</span>: <span class="string">"\u6df1\u5733"</span>, <span class="attr">"weather"</span>: <span class="string">"\u591a\u4e91"</span>, <span class="attr">"temperature"</span>: <span class="string">"21 ~ 26\u2103"</span>, <span class="attr">"humidity"</span>: <span class="string">"\u6e7f\u5ea6\uff1a63%"</span>, <span class="attr">"wind"</span>: <span class="string">"\u98ce\u5411\uff1a\u5317\u98ce 2\u7ea7"</span>, <span class="attr">"radiation"</span>: <span class="string">"\u7d2b\u5916\u7ebf\uff1a\u5f31"</span>, <span class="attr">"air"</span>: <span class="string">"PM: 43"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>参数说明</strong></p><ul><li><code>code</code>: <code>0</code> 成功、<code>-1</code> 失败；</li><li><code>type</code>: 例如 [<code>weather</code>, <code>stock</code>, <code>news</code>] 等；</li><li><code>date</code>: 当天日期，如 <code>2018-05-01</code>；</li><li><code>content</code>: 获取的 Json 格式信息，这部分提交到仓库保存；</li></ul><h2 id="Todo"><a href="#Todo" class="headerlink" title="Todo"></a>Todo</h2><ul><li style="list-style: none"><input type="checkbox" checked> Python 插件化信息管理，可拓展；</li><li style="list-style: none"><input type="checkbox" checked> 信息保存到 Github 仓库；</li><li style="list-style: none"><input type="checkbox"> 更多插件补充；</li><li><p>[ ] Docker一键部署到本地或服务器；</p></li><li><p>[ ] 信息可视化</p><ul><li style="list-style: none"><input type="checkbox"> Pyeacharts 网页显示</li><li style="list-style: none"><input type="checkbox"> Gitpage 静态页面每日渲染</li></ul></li><li><p>[ ] Itchat 微信推送</p><ul><li style="list-style: none"><input type="checkbox"> 自动登录</li><li style="list-style: none"><input type="checkbox"> 自动推送</li><li style="list-style: none"><input type="checkbox"> 信息查询</li></ul></li><li><p>[ ] 补充插件内容</p><ul><li style="list-style: none"><input type="checkbox"> 插件思路收集</li><li style="list-style: none"><input type="checkbox"> <strong>大新闻</strong>日常备份</li><li style="list-style: none"><input type="checkbox"> 商品价格记录插件</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Python-插件式的信息爬虫&quot;&gt;&lt;a href=&quot;#Python-插件式的信息爬虫&quot; class=&quot;headerlink&quot; title=&quot;Python 插件式的信息爬虫&quot;&gt;&lt;/a&gt;Python 插件式的信息爬虫&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;🐝 一群
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Python插件式程序结构设计</title>
@@ -574,27 +596,6 @@
       <category term="Code" scheme="http://wangshub.github.io/tags/Code/"/>
     
       <category term="Linux" scheme="http://wangshub.github.io/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://wangshub.github.io/2017/04/14/hello-world/"/>
-    <id>http://wangshub.github.io/2017/04/14/hello-world/</id>
-    <published>2017-04-14T13:28:12.000Z</published>
-    <updated>2018-03-17T09:10:40.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
     
   </entry>
   
