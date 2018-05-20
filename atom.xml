@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wangshub.github.io/"/>
-  <updated>2018-05-20T08:56:01.000Z</updated>
+  <updated>2018-05-20T09:06:01.000Z</updated>
   <id>http://wangshub.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://wangshub.github.io/2018/05/13/%E4%BD%BF%E7%94%A8Emacs%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86%EF%BC%88GTD%EF%BC%89/"/>
     <id>http://wangshub.github.io/2018/05/13/使用Emacs进行日程管理（GTD）/</id>
     <published>2018-05-13T06:19:22.000Z</published>
-    <updated>2018-05-20T08:56:01.000Z</updated>
+    <updated>2018-05-20T09:06:01.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="使用-Emacs-进行日程管理-GTD"><a href="#使用-Emacs-进行日程管理-GTD" class="headerlink" title="使用 Emacs 进行日程管理 (GTD)"></a>使用 Emacs 进行日程管理 (GTD)</h1><h2 id="什么是-GTD"><a href="#什么是-GTD" class="headerlink" title="什么是 GTD ?"></a>什么是 GTD ?</h2><blockquote><p>Your mind is for having ideas, not holding them. — David Allen</p></blockquote><p><strong>GTD</strong> (Getting Things Done) 是一个组织和跟进任务或待办事项的系统架构，但是它的目标要高于仅仅是将事情做完，而是要将待办事项以一个更好的方式完成。GTD 的目标是让人 100% 地相信 GTD 的系统来收集任务、想法。这样才能卸下记忆这些想法的思想包袱，专注的完成当下的任务。GTD 将所有的事情罗列下来，然后再进行分类，你就能从一个比较宏观的角度来看待这一堆问题，并且确定下一步的处理方法，将所有悬而未决的事情尽量地处于我们个人的掌握之中。</p><p>更多关于 GTD 方法的介绍可以参考 <a href="https://gettingthingsdone.com/" target="_blank" rel="noopener">David Allen</a> 的博客和相关书籍。</p><p>理论就介绍到这里了，目前市面上有许许多多在各种平台上收费 GTD 任务管理软件、也有许多开源免费的软件，如</p><ul><li><a href="Taskwarrior - What&#39;s next?">Taskwarrior</a></li><li><a href="Todo.txt: Future-proof task tracking in a file you control" target="_blank" rel="noopener">Todo.txt</a></li><li><a href="https://orgmode.org/" target="_blank" rel="noopener">Emacs Org-mode</a></li><li>…</li></ul><p>今天主要 Show 一下在 Emacs 中使用 Org-mode 来记录、分类、保存、跟进我的想法和任务</p><p><strong>主要特点</strong></p><ul><li>基于 Spacemacs 功能强大；</li><li>操作难度较大，可定制性强；</li><li>利用 Git 工具定期自动备份笔记；</li></ul><h2 id="Emacs-插件安装步骤"><a href="#Emacs-插件安装步骤" class="headerlink" title="Emacs 插件安装步骤"></a>Emacs 插件安装步骤</h2><p>项目地址：<a href="https://github.com/carlos-wong/org-agenda-carlos" target="_blank" rel="noopener">https://github.com/carlos-wong/org-agenda-carlos</a></p><h2 id="在-Emacs-中进行日程管理"><a href="#在-Emacs-中进行日程管理" class="headerlink" title="在 Emacs 中进行日程管理"></a>在 Emacs 中进行日程管理</h2><p>安装并配置好插件后，使用时主要分三步：<strong>录入、显示、保存</strong>。</p><h3 id="Todo-录入"><a href="#Todo-录入" class="headerlink" title="Todo 录入"></a>Todo 录入</h3><p>绑定输入快捷键：<code>F7</code><br>绑定显示快捷键：<code>F6</code></p><ul><li>选择 Todo 类型</li></ul><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://ws1.sinaimg.cn/large/c3a916a7gy1frhv25t2b7j20b505a0sq.jpg" alt="" title="">                </div>                <div class="image-caption"></div>            </figure><ul><li>输入事项</li></ul><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://ws1.sinaimg.cn/large/c3a916a7gy1frhv5kx5hwj20ea02jt8v.jpg" alt="" title="">                </div>                <div class="image-caption"></div>            </figure><ul><li>安排节点</li></ul><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://ws1.sinaimg.cn/large/c3a916a7gy1frhvn7ahrqj20eb02iaac.jpg" alt="" title="">                </div>                <div class="image-caption"></div>            </figure><h3 id="Todo-显示"><a href="#Todo-显示" class="headerlink" title="Todo 显示"></a>Todo 显示</h3><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://ws1.sinaimg.cn/large/c3a916a7gy1frhva450zgj20ud0dz427.jpg" alt="" title="">                </div>                <div class="image-caption"></div>            </figure><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>现在，每天打开 Emacs 的第一件事就是看今天的 Org ,又有做不完的事情了 ~  </p>]]></content>
     
@@ -34,6 +34,10 @@
     
     </summary>
     
+    
+      <category term="Emacs" scheme="http://wangshub.github.io/tags/Emacs/"/>
+    
+      <category term="Lisp" scheme="http://wangshub.github.io/tags/Lisp/"/>
     
   </entry>
   
