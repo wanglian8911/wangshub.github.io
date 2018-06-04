@@ -147,18 +147,14 @@
 
     
   <url>
-    <loc>http://wangshub.github.io/2017/12/16/python%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E5%9B%BE%E5%83%8F%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%E5%92%8C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
+    <loc>http://wangshub.github.io/2017/12/18/linux%E9%A9%B1%E5%8A%A8%E5%99%A8%E5%92%8C%E5%88%86%E5%8C%BA%E7%9A%84%E5%A4%87%E4%BB%BD%EF%BC%8C%E4%BD%BF%E7%94%A8dd%E5%91%BD%E4%BB%A4%E7%A4%BA%E4%BE%8B/</loc>
     <lastmod>2018-03-17T09:10:40.000Z</lastmod>
     <data>
         <display>
-        <title>python数字图像处理-图像的基本结构和基础知识</title>
-        <pubTime>2017-12-16T09:10:39.000Z</pubTime>
+        <title>linux驱动器和分区的备份，使用dd命令示例</title>
+        <pubTime>2017-12-18T12:04:51.000Z</pubTime>
         
-        <tag>python</tag>
-         
-        <tag>algorithm</tag>
-         
-        <tag>image</tag>
+        <tag>linux</tag>
          
          
            
@@ -325,14 +321,18 @@
 
     
   <url>
-    <loc>http://wangshub.github.io/2017/12/25/Python%E8%94%A1%E8%8B%B1%E6%96%87facebook%E4%B8%BB%E9%A1%B5%E5%88%86%E6%9E%90-by%E7%A5%9E%E5%A5%87%E7%9A%84%E6%88%98%E5%A3%AB/</loc>
+    <loc>http://wangshub.github.io/2017/12/16/python%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E5%9B%BE%E5%83%8F%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%E5%92%8C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2018-03-17T09:10:40.000Z</lastmod>
     <data>
         <display>
-        <title>Python蔡英文facebook主页分析_by神奇的战士</title>
-        <pubTime>2017-12-25T07:14:39.000Z</pubTime>
+        <title>python数字图像处理-图像的基本结构和基础知识</title>
+        <pubTime>2017-12-16T09:10:39.000Z</pubTime>
         
         <tag>python</tag>
+         
+        <tag>algorithm</tag>
+         
+        <tag>image</tag>
          
          
            
@@ -482,40 +482,6 @@
 
     
   <url>
-    <loc>http://wangshub.github.io/2017/12/14/image-to-excel/</loc>
-    <lastmod>2018-03-17T09:10:40.000Z</lastmod>
-    <data>
-        <display>
-        <title>python：将图片转换成excel文档</title>
-        <pubTime>2017-12-14T13:28:12.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://wangshub.github.io/2017/12/18/linux%E9%A9%B1%E5%8A%A8%E5%99%A8%E5%92%8C%E5%88%86%E5%8C%BA%E7%9A%84%E5%A4%87%E4%BB%BD%EF%BC%8C%E4%BD%BF%E7%94%A8dd%E5%91%BD%E4%BB%A4%E7%A4%BA%E4%BE%8B/</loc>
-    <lastmod>2018-03-17T09:10:40.000Z</lastmod>
-    <data>
-        <display>
-        <title>linux驱动器和分区的备份，使用dd命令示例</title>
-        <pubTime>2017-12-18T12:04:51.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://wangshub.github.io/2017/05/25/Atom-editor/</loc>
     <lastmod>2018-03-17T09:10:40.000Z</lastmod>
     <data>
@@ -533,6 +499,40 @@
              
               <breadCrumb title="Linux" url="http://wangshub.github.io/categories/Tool/Linux/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://wangshub.github.io/2017/12/25/Python%E8%94%A1%E8%8B%B1%E6%96%87facebook%E4%B8%BB%E9%A1%B5%E5%88%86%E6%9E%90-by%E7%A5%9E%E5%A5%87%E7%9A%84%E6%88%98%E5%A3%AB/</loc>
+    <lastmod>2018-03-17T09:10:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>Python蔡英文facebook主页分析_by神奇的战士</title>
+        <pubTime>2017-12-25T07:14:39.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://wangshub.github.io/2017/12/14/image-to-excel/</loc>
+    <lastmod>2018-03-17T09:10:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>python：将图片转换成excel文档</title>
+        <pubTime>2017-12-14T13:28:12.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+         
+           
         </display>
     </data>
     </url>
