@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wangshub.github.io/"/>
-  <updated>2018-06-09T01:59:41.000Z</updated>
+  <updated>2018-07-08T02:49:12.000Z</updated>
   <id>http://wangshub.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机器人强化学习笔记（0）</title>
+    <link href="http://wangshub.github.io/2018/07/03/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://wangshub.github.io/2018/07/03/强化学习笔记/</id>
+    <published>2018-07-03T14:34:36.000Z</published>
+    <updated>2018-07-08T02:49:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="机器人强化学习笔记（0）"><a href="#机器人强化学习笔记（0）" class="headerlink" title="机器人强化学习笔记（0）"></a>机器人强化学习笔记（0）</h1><h2 id="机器学习分类"><a href="#机器学习分类" class="headerlink" title="机器学习分类"></a>机器学习分类</h2><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://ws1.sinaimg.cn/large/c3a916a7gy1fsx1t71czwj20lc0dkdjg.jpg" alt="Machine Learning" title="">                </div>                <div class="image-caption">Machine Learning</div>            </figure><h2 id="强化学习问题"><a href="#强化学习问题" class="headerlink" title="强化学习问题"></a>强化学习问题</h2><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://ws1.sinaimg.cn/large/c3a916a7gy1fsx1s6yxgsj20c204vjrh.jpg" alt="RL problem" title="">                </div>                <div class="image-caption">RL problem</div>            </figure><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://ws1.sinaimg.cn/large/c3a916a7gy1fsx1xqsh7ij20c204v0t0.jpg" alt="Child walk" title="">                </div>                <div class="image-caption">Child walk</div>            </figure><ul><li><strong>监督学习</strong>：监督学习由任务驱动，需要创造外部的“导师”，“导师”拥有外部环境的所有先验信息，并教导 Agent 完成特定的任务。但是 Agent 可以用很多种子任务相结合的方式去完成相同的任务。所以创造一个全能的“导师”来训练 Agent 在实际中几乎是不可能的。</li><li><strong>非监督学习</strong>：非监督学习是由数据驱动，主要目的是找到底层的模式而不是映射关系。例如给用户推荐新闻时，非监督学习主要是根据用户先前阅读过的新闻来推荐相似的新闻。</li><li><strong>强化学习</strong>：和上面两种方法相比较，强化学习主要是从自身的经验来获取知识，在输入和输出之间存在着映射关系。强化学习将奖励函数作为行为的反馈。</li></ul><h2 id="解决强化学习问题的框架和算法"><a href="#解决强化学习问题的框架和算法" class="headerlink" title="解决强化学习问题的框架和算法"></a>解决强化学习问题的框架和算法</h2><p>强化学习需要平衡 <strong>exploration vs exploitation</strong> 困境。</p><h3 id="马尔可夫决策过程-Markov-Decision-Process"><a href="#马尔可夫决策过程-Markov-Decision-Process" class="headerlink" title="马尔可夫决策过程(Markov Decision Process)"></a>马尔可夫决策过程(Markov Decision Process)</h3><p>在强化学习场景下，数学模型为马尔可夫决策过程，表示为</p><ul><li>状态集合：S</li><li>动作集合：A</li><li>奖励函数：R</li><li>策略：Pi</li><li>值：V</li></ul><p>从起始状态到结束状态$S$需要经过动作集合 A。执行每个动作后，都会获得奖励 R，每个动作可能会导致好的或者坏的奖励函数值。策略(Policy)就是采取某个系列动作的方法，并且会相应的得到奖励函数的值。因此，求解强化学习的目标就是要选取最佳策略(Policy)，在所有可能的状态和时间范围内使得评估函数最大，即</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://ws1.sinaimg.cn/large/c3a916a7gy1ft298te49zj203001c0si.jpg" alt="" title="">                </div>                <div class="image-caption"></div>            </figure><h3 id="最短路径问题-Shortest-Path-Problem"><a href="#最短路径问题-Shortest-Path-Problem" class="headerlink" title="最短路径问题(Shortest Path Problem)"></a>最短路径问题(Shortest Path Problem)</h3><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://ws1.sinaimg.cn/large/c3a916a7gy1fsx3dp18t2j20md0bq74c.jpg" alt="" title="">                </div>                <div class="image-caption"></div>            </figure><p>求解以最小代价，从地点 A 到地点 F 的最短路径问题，转化为</p><ul><li>节点集合 {A, B, C, D, E, F}</li><li>从点到点移动成为动作，{A-&gt;B, C-&gt;D}</li><li>奖励函数为每条边的花费</li><li>完成 A 点到 F 行走路线成为策略，如 {A-&gt;B-&gt;D-&gt;F}</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;机器人强化学习笔记（0）&quot;&gt;&lt;a href=&quot;#机器人强化学习笔记（0）&quot; class=&quot;headerlink&quot; title=&quot;机器人强化学习笔记（0）&quot;&gt;&lt;/a&gt;机器人强化学习笔记（0）&lt;/h1&gt;&lt;h2 id=&quot;机器学习分类&quot;&gt;&lt;a href=&quot;#机器学习分类&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://wangshub.github.io/tags/Python/"/>
+    
+      <category term="Reinforment Learning" scheme="http://wangshub.github.io/tags/Reinforment-Learning/"/>
+    
+  </entry>
   
   <entry>
     <title>效率工具网站推荐</title>
@@ -132,9 +157,9 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="http://wangshub.github.io/tags/JavaScript/"/>
-    
       <category term="Cerebro" scheme="http://wangshub.github.io/tags/Cerebro/"/>
+    
+      <category term="JavaScript" scheme="http://wangshub.github.io/tags/JavaScript/"/>
     
   </entry>
   
@@ -477,39 +502,6 @@
       <category term="Python" scheme="http://wangshub.github.io/tags/Python/"/>
     
       <category term="VPN" scheme="http://wangshub.github.io/tags/VPN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python mail sender</title>
-    <link href="http://wangshub.github.io/2017/07/20/python-mail-sender/"/>
-    <id>http://wangshub.github.io/2017/07/20/python-mail-sender/</id>
-    <published>2017-07-20T14:22:06.000Z</published>
-    <updated>2018-03-17T09:10:40.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="python-发送邮件"><a href="#python-发送邮件" class="headerlink" title="python 发送邮件"></a>python 发送邮件</h1><h2 id="配置服务器和邮箱"><a href="#配置服务器和邮箱" class="headerlink" title="配置服务器和邮箱"></a>配置服务器和邮箱</h2><blockquote><p>mail_info.py<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mail_host = <span class="string">'smtp.yeah.net'</span></span><br><span class="line">mail_user = <span class="string">'mail_name'</span></span><br><span class="line">mail_pass = <span class="string">'mail_password'</span></span><br><span class="line"></span><br><span class="line">sender = <span class="string">'mail_name@yeah.net'</span></span><br><span class="line">receivers = [<span class="string">'target@mail.com'</span>]</span><br></pre></td></tr></table></figure></p></blockquote><h2 id="发送邮件"><a href="#发送邮件" class="headerlink" title="发送邮件"></a>发送邮件</h2><blockquote><p>mail_trans.py<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> .mail_info <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> smtplib</span><br><span class="line"><span class="keyword">from</span> email.mime.text <span class="keyword">import</span> MIMEText</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mail_text_send</span><span class="params">(title, text)</span>:</span></span><br><span class="line">    message = MIMEText(text, <span class="string">'plain'</span>, <span class="string">'utf-8'</span>)</span><br><span class="line">    message[<span class="string">'Subject'</span>] = title</span><br><span class="line">    message[<span class="string">'From'</span>] = sender</span><br><span class="line">    message[<span class="string">'To'</span>] = receivers[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        smtpObj = smtplib.SMTP()</span><br><span class="line">        <span class="comment"># connect host</span></span><br><span class="line">        smtpObj.connect(mail_host, <span class="number">25</span>)</span><br><span class="line">        <span class="comment"># login host</span></span><br><span class="line">        smtpObj.login(mail_user, mail_pass)</span><br><span class="line">        <span class="comment"># send</span></span><br><span class="line">        smtpObj.sendmail(sender, receivers, message.as_string())</span><br><span class="line">        <span class="comment"># quit</span></span><br><span class="line">        smtpObj.quit()</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line">    <span class="keyword">except</span> smtplib.SMTPException <span class="keyword">as</span> e:</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">False</span></span><br></pre></td></tr></table></figure></p></blockquote><h2 id="主程序调用"><a href="#主程序调用" class="headerlink" title="主程序调用"></a>主程序调用</h2><blockquote><p>main.py<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> mail_trans <span class="keyword">import</span> *</span><br><span class="line">mail_text_send(<span class="string">'title'</span>, <span class="string">'hello world!'</span>)</span><br></pre></td></tr></table></figure></p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;python-发送邮件&quot;&gt;&lt;a href=&quot;#python-发送邮件&quot; class=&quot;headerlink&quot; title=&quot;python 发送邮件&quot;&gt;&lt;/a&gt;python 发送邮件&lt;/h1&gt;&lt;h2 id=&quot;配置服务器和邮箱&quot;&gt;&lt;a href=&quot;#配置服务器和邮箱&quot;
-      
-    
-    </summary>
-    
-      <category term="Python" scheme="http://wangshub.github.io/categories/Python/"/>
-    
-      <category term="Code" scheme="http://wangshub.github.io/categories/Python/Code/"/>
-    
-      <category term="Mail" scheme="http://wangshub.github.io/categories/Python/Code/Mail/"/>
-    
-    
-      <category term="Code" scheme="http://wangshub.github.io/tags/Code/"/>
-    
-      <category term="Python" scheme="http://wangshub.github.io/tags/Python/"/>
-    
-      <category term="Mail" scheme="http://wangshub.github.io/tags/Mail/"/>
     
   </entry>
   
