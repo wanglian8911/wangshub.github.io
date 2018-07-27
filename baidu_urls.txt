@@ -1,1 +1,1 @@
-http://wangshub.github.io/2018/07/03/强化学习笔记/
+http://wangshub.github.io/2018/07/27/机器人强化学习之使用 OpenAI Gym 教程与笔记/
