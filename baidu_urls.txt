@@ -1,1 +1,1 @@
-http://wangshub.github.io/2018/09/20/在roboschool中控制Atlas/
+http://wangshub.github.io/2018/09/30/用Python写Alfred3插件/
